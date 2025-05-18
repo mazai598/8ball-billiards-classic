@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: url('../assets/images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* 更现代字体 */
+}
+
+#game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px; /* 固定容器宽度 */
+    min-height: 600px; /* 确保内容高度 */
+}
+
+#game-canvas {
+    border: none;
+}
+
+#menu {
+    position: fixed; /* 固定到底部 */
+    bottom: 20px; /* 与底部留出间距 */
+    width: 450px; /* 稍宽的菜单 */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.85)); /* 渐变背景 */
+    padding: 25px;
+    color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* 更强的阴影 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #d4af37; /* 柔和的金色边框 */
+    z-index: 10; /* 确保菜单在画布上方 */
+}
+
+button, select {
+    margin: 12px;
+    padding: 14px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #2196F3, #1976D2); /* 蓝色渐变 */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 增强阴影 */
+    font-weight: 500; /* 加粗字体 */
+}
+
+button:hover, select:hover {
+    transform: scale(1.07); /* 悬停时更大放大 */
+    background: linear-gradient(90deg, #1976D2, #1565C0); /* 变暗渐变 */
+}
+
+#loading-container {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+#progress-bar {
+    width: 300px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+#progress {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #2196F3, #1976D2);
+    transition: width 0.3s ease;
+}

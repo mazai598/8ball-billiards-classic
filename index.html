@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 入洞大师 </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="menu">
+            <h1>入洞大师</h1>
+            <button id="single-mode-btn">单人模式</button>
+            <button id="multi-mode-btn">双人模式</button>
+            <select id="difficulty" onchange="setDifficulty(this.value)">
+                <option value="easy">简单</option>
+                <option value="medium">中等</option>
+                <option value="hard">困难</option>
+            </select>
+        </div>
+        <div id="score">
+            <p>玩家1: <span id="player1-score">0</span></p>
+            <p>玩家2/AI: <span id="player2-score">0</span></p>
+            <p>当前玩家: <span id="current-player">玩家1</span></p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
